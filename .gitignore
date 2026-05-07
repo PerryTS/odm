@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+*.o
+.DS_Store
+.perry-cache/
+# Perry-AOT compiled binaries
+perryts-odm*

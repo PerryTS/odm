@@ -1,0 +1,60 @@
+{
+  "name": "@perryts/odm",
+  "version": "0.1.0",
+  "description": "Value-oriented MongoDB ODM for TypeScript. Zod schemas, ref/populate, lifecycle hooks, declarative indexes (compound, unique, 2dsphere, TTL). Sits on @perryts/mongodb. Zero native deps. Compiles to a native binary via Perry (LLVM AOT).",
+  "keywords": [
+    "mongodb",
+    "odm",
+    "schema",
+    "zod",
+    "perry",
+    "perryts",
+    "llvm",
+    "native",
+    "aot",
+    "populate",
+    "geospatial",
+    "ttl"
+  ],
+  "homepage": "https://github.com/PerryTS/odm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PerryTS/odm.git"
+  },
+  "author": "Skelpo",
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "perry": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["src/", "dist/", "README.md", "MIGRATING_FROM_MONGOOSE.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@perryts/mongodb": "^0.1.0",
+    "zod": "^3.23.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "@perryts/mongodb": "^0.1.1",
+    "@types/node": "latest",
+    "typescript": "^5.4",
+    "zod": "^3.23.8"
+  }
+}
