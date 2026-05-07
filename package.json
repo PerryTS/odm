@@ -1,6 +1,6 @@
 {
   "name": "@perryts/odm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Value-oriented MongoDB ODM for TypeScript. Zod schemas, ref/populate, lifecycle hooks, declarative indexes (compound, unique, 2dsphere, TTL). Sits on @perryts/mongodb. Zero native deps. Compiles to a native binary via Perry (LLVM AOT).",
   "keywords": [
     "mongodb",
