@@ -37,12 +37,12 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["src/", "dist/", "README.md", "MIGRATING_FROM_MONGOOSE.md", "LICENSE"],
+  "files": ["src/", "dist/", "scripts/", "README.md", "MIGRATING_FROM_MONGOOSE.md", "LICENSE"],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/add-js-extensions.mjs",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build",
     "typecheck": "tsc --noEmit"
